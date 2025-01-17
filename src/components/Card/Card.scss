@@ -1,0 +1,21 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    &__image {
+        border-radius: 10px;
+        width: 380px;
+        height: 380px;
+        object-fit: cover;
+    }
+    &__title {
+        position: absolute;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        padding-left: 20px;
+        width: 15%;
+        font-size: 18px;
+        text-shadow: 0px 2px 4px #000000;
+    }
+}
