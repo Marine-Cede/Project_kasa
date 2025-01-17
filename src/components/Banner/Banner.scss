@@ -1,0 +1,24 @@
+.banner{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 223px;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    background-color: #000000;
+    &__image {
+        width: 1410px;
+        opacity: 60%;
+    }
+    &__title {
+        position: absolute;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+        font-size: 48px;
+        text-shadow: 0px 4px 4px #000000;
+    }
+}
