@@ -1,0 +1,12 @@
+.main_apropos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    margin-bottom: 50px;
+    &__collapse{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

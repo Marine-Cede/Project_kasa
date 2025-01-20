@@ -1,11 +1,10 @@
-import bannerImg from "../../assets/Banner_Background.png"
 import "./Banner.scss"
 
-export default function Banner(){
+export default function Banner({image, title, alt}){
     return (
         <div className="banner">
-            <img className="banner__image" src={bannerImg} alt="Paysage rocheux au bord de mer"></img>
-            <h1 className="banner__title">Chez vous, partout et ailleurs</h1>
+            <img className="banner__image" src={image} alt={alt}></img>
+            <h1 className="banner__title">{title}</h1>
         </div>
     )
 }
