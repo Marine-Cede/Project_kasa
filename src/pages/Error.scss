@@ -1,0 +1,38 @@
+.error_main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 90px;
+    margin-top: 40px;
+
+    img {
+        width: 597px;
+        height: 263px;
+        margin-left: 80px;
+    }
+
+    &__text{
+        color: #FF6060;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: xx-large;
+        font-weight: 500;
+        font-family: "Montserrat",sans-serif;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 150px;
+    }
+}
