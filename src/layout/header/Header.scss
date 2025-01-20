@@ -1,35 +1,39 @@
 .navigation {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding: 30px;
-
+   display: flex;
+   justify-content: space-around;
     nav {
-        width: 30%;
-        color: black;
         display: flex;
-        flex-direction: row;
-        justify-content: end;
-        gap: 60px;
-        font-size: 24px;
-        font-family: 'Montserrat', sans-serif;
-        text-decoration: none;
-        font-weight: 500;
+        align-items: center;
+        gap: 57px;
+        @media (max-width:390px) {
+            gap: 26px;            
+        }
         .navLien{
             color: black;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 34px;            
             text-decoration: none;
             &:hover {
                 text-decoration: underline;
             }
+            @media (max-width:390px) {                
+                font-size: 12px;
+                line-height: 17px;           
+            }
         }
-       
+        .active{
+            text-decoration: underline;
+        }       
     }
-
     img {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-    }
+        width: 210px;
+        margin-right: 100px;
+        @media (max-width:390px) {
+            width: 145px;
+            height: 46px;
+            margin-right: 0px
+        }
+    }   
 }

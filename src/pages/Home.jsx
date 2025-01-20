@@ -10,7 +10,7 @@ export default function Home() {
     return (
     <div className="home">
         <Banner image={bannerImg} alt="Paysage rocheux au bord de mer" title="Chez vous, partout et ailleurs"/>
-            <section className="location">
+            <section className="home__section">
                 {logementsList.map((logement)=>
                     <Card title={logement.title} image={logement.cover} />)
                 }

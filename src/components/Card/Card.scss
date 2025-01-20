@@ -1,21 +1,29 @@
 .card {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    flex-direction: column;  
+    justify-content: end;
     &__image {
-        border-radius: 10px;
-        width: 380px;
-        height: 380px;
+        width: 340px;
+        height: 340px;
         object-fit: cover;
+        border-radius: 10px;
+        @media (max-width:390px) {
+            width: 335px;
+            height: 255px;          
+        }
+     
     }
     &__title {
         position: absolute;
         color: white;
-        font-family: "Montserrat", sans-serif;
         padding-left: 20px;
-        width: 15%;
+        font-weight: 700;
         font-size: 18px;
+        line-height: 26px;
         text-shadow: 0px 2px 4px #000000;
+        width: 14%;
+        @media (max-width:390px) {     
+            width: 50%;    
+        }
     }
 }
