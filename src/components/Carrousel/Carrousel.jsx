@@ -34,11 +34,12 @@ export default function Carrousel({images}) {
                     <img src={image} className="carrousel__slider__img"></img>
                  )}
                 </div>
+                {length > 1 &&
                 <div className="carrousel__items">
                     <i className="fa-solid fa-chevron-left carrousel__items__chevron" onClick={previousImg}/>
                     <p className="carrousel__items__number">{currentImg+1}/{length}</p>
                     <i className="fa-solid fa-chevron-right carrousel__items__chevron" onClick={nextImg}/>
-                </div>
+                </div>}
             </div>
     )
 }

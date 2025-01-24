@@ -1,0 +1,15 @@
+.star_active{
+    color: #ff6060;
+    font-size: larger;
+}
+
+.star_inactive {
+    color: #e3e3e3;
+    font-size: larger;
+}
+
+.star{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}

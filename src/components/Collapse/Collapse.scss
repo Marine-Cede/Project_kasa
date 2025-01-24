@@ -9,6 +9,7 @@
             align-items: center;
             justify-content: space-between;
             border-radius: 5px;
+            height: 52px;
             @media (max-width:390px) {
                 height: 30px;
             }
@@ -51,11 +52,15 @@
             }
             &__hidden{
                 padding: 0 18px;
-                // display: none;
                 overflow: hidden;
                 height: 0;
-                // transition: height 0.5s ease, padding 0.5s ease;
             }
         }
         
+}
+
+.collapse_logement{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
 }
