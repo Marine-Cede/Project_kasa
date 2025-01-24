@@ -1,15 +1,25 @@
-.star_active{
-    color: #ff6060;
-    font-size: larger;
-}
-
-.star_inactive {
-    color: #e3e3e3;
-    font-size: larger;
-}
+@import "../../style/variable.scss";
+@import "../../style/mixin.scss";
 
 .star{
     display: flex;
     flex-direction: row;
     gap: 10px;
+    &__active{
+        color: $primary_color;
+        font-size: larger;
+
+        @include mobile_responsive{
+            font-size: 15px;
+        }
+    }
+
+    &__inactive {
+        color: #e3e3e3;
+        font-size: larger;
+
+        @include mobile_responsive{
+            font-size: 15px;
+        }
+    }
 }

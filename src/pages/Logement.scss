@@ -1,9 +1,12 @@
+@import "../style/variable.scss";
+@import "../style/mixin.scss";
+
 .logement {
     width: 66%;
     margin-top: 40px;
     margin-bottom: 40px;
 
-    @media (max-width:390px){
+    @include mobile_responsive{
         width: 90%;
         margin-top: 30px;
         margin-bottom: 30px;
@@ -15,24 +18,29 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
+
+       @include mobile_responsive {
+            flex-direction: column;
+        }
         &__items {
             display: flex;
             flex-direction: column;
 
-            @media (max-width:390px){
+            @include mobile_responsive{
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
+                width: 100%;
             }
             h2{
-                color: #FF6060;
+                color: $primary_color;
                 font-size: 36px;
                 font-weight: 500;
                 margin: 0;
                 margin-top: 30px;
 
-                @media (max-width:390px){
-                    font-size: 18px;
+                @include mobile_responsive{
+                    font-size: map-get($font_size,text);
                     font-weight: 500;
                     width: 90%;
                 }
@@ -42,18 +50,19 @@
                 display: flex;
                 flex-direction: column;
                 margin-bottom: 20px;
-                @media (max-width:390px){
+                @include mobile_responsive{
                     width: 100%;
+                    margin-bottom: 0;
                 }
 
                 p{
                     line-height: 26px;
                     margin: 0;
                     margin-top: 10px;
-                    font-size: 18px;
+                    font-size: map-get($font_size,text);
 
-                    @media (max-width:390px){
-                        font-size: 14px;
+                    @media (max-width:$mediaquery_mobile){
+                        font-size: map-get($font_size,mobile_text);
                         margin-top: 5px;
                     }
                 }
@@ -70,6 +79,12 @@
                 flex-direction: column;
                 align-items: flex-end;
                 gap: 45px;
+
+                @include mobile_responsive{
+                    flex-direction: row-reverse;
+                    align-items: center;
+                    gap: 100px;
+                }
             }
         }
     }
@@ -78,8 +93,16 @@
         flex-direction: row;
         justify-content: space-between;
         margin-top: 15px;
+        @include mobile_responsive{
+            flex-direction: column;
+            gap: 15px;
+        }
         h2{
             font-size: 18px;
+
+            @include mobile_responsive{
+                font-size: map-get($font_size,mobile_text);
+            }
         }
     }
     

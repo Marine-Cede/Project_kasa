@@ -30,8 +30,8 @@ export default function Carrousel({images}) {
         <div className="carrousel">
                 <div className="carrousel__slider" style={{ transform: `translateX(${-currentImg * 100}%)` }}>
                 {
-                images.map((image)=>
-                    <img src={image} className="carrousel__slider__img"></img>
+                images.map((image,index)=>
+                    <img  key={`image-${index}`} src={image} className="carrousel__slider__img"></img>
                  )}
                 </div>
                 {length > 1 &&

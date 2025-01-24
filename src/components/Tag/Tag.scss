@@ -1,17 +1,19 @@
+@import "../../style/variable.scss";
+@import "../../style/mixin.scss";
 .tags {
-    background-color: #FF6060;
-    color: white;
+    background-color: $primary_color;
+    color: $terciary_color;
     height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 10px;
+    border-radius: map-get($border_radius, medium );
     font-weight: 700;
     font-size: 14px;
     padding-left: 20px;
     padding-right: 20px;
 
-    @media (max-width:390px){
+    @include mobile_responsive{
         font-size: 10px;
         font-weight: 700;
         border-radius: 5px;

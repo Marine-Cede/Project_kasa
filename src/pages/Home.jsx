@@ -12,9 +12,9 @@ export default function Home() {
     <div className="home">
         <Banner image={bannerImg} alt="Paysage rocheux au bord de mer" title="Chez vous, partout et ailleurs"/>
             <section className="home__section">
-                {logementsList.map((logement)=>
-                    <Link to={`/logements/${logement.id}`}>
-                        <Card title={logement.title} image={logement.cover} />
+                {logementsList.map((logement, index)=>
+                    <Link key={`${logement.id}-${index}`} to={`/logements/${logement.id}`}>
+                        <Card key={`${logement.id}`} title={logement.title} image={logement.cover} />
                     </Link>
                     )
                 }

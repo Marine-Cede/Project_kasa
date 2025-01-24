@@ -1,3 +1,5 @@
+@import "../style/variable.scss";
+@import "../style/mixin.scss";
 
 .home {
     margin-top: 50px;
@@ -6,7 +8,7 @@
     align-items: center ;
     flex-direction: column;
     width: 65%;
-    @media (max-width:390px) {
+    @include mobile_responsive {
         width: 100%;
         margin-top: 25px;
     }
@@ -15,17 +17,19 @@
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: flex-start;
-          background-color: #F6F6F6;
-          border-radius: 25px;
+          background-color: $secondary_color;
+          border-radius: map-get($border_radius,large );
           gap: 50px;
           padding-top: 55px;
           margin-bottom: 50px;
+          padding-bottom: 50px;
           padding-left: 55px;
-          @media (max-width:390px) {
+           @include mobile_responsive {
             width: 335px; 
             padding-top: 0px;
             padding-left: 0px;      
             gap: 22px;  
+            background-color: $terciary_color;
         }
 
     }

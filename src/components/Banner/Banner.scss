@@ -1,3 +1,6 @@
+@import "../../style/variable.scss";
+@import "../../style/mixin.scss";
+
 .banner{
     display: flex;
     justify-content: center;
@@ -9,27 +12,27 @@
     box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.59);   
     background-color: #000000;
     margin-bottom: 50px;
-    @media (max-width:390px) {
+    @include mobile_responsive {
         height: 110px;
         margin-bottom: 25px;
     }
     &__image {
         opacity: 40%;    
         width: 1240px;
-        @media (max-width:390px) {
+        @include mobile_responsive {
             opacity: 40%;    
             width: 335px;
         }
     }
     &__title {
         position: absolute;
-        color: white;
+        color: $terciary_color;
         font-size: 48px;
         text-shadow: 0px 4px 4px #000000;
-        @media (max-width:390px) {
+        @include mobile_responsive {
             position: absolute;
-            color: white;
-            font-size: 24px;
+            color: $terciary_color;
+            font-size: map-get($font_size, title );
             line-height: 24px;
             font-weight: 700;
             text-shadow: 0px 4px 4px #000000;

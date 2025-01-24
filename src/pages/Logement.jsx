@@ -10,11 +10,11 @@ export default function Logement() {
     const {idLogement} = useParams();
     const logement = logementList.find((element)=> element.id == idLogement)
     if(!logement){
-        return(<Navigate to="*"/>)
+        return(<Navigate to="error"/>)
     }
     return (
     <div className="logement">
-        <Carrousel images={logement.pictures}/>
+        <Carrousel key={"carrousel"} images={logement.pictures}/>
         <div className="logement__global"> 
             <div className="logement__global__items">        
                 <div className="logement__global__items__title">
@@ -22,7 +22,7 @@ export default function Logement() {
                     <p>{logement.location}</p>
                 </div>
                 <div className="logement__global__items__tags">
-                    {logement.tags.map((tag)=> <Tag title={tag}/>)}
+                    {logement.tags.map((tag, index)=> <Tag key={`${tag}-${index}`}title={tag}/>)}
                 </div>
             </div>
             <div className="logement__global__items__customer">
@@ -33,7 +33,7 @@ export default function Logement() {
 
         <div className="logement__collapse">
             <Collapse title="Description" description={logement.description} className="collapse_logement"/>
-            <Collapse title="Équipements" description={logement.equipments} className="collapse_logement"/>
+            <Collapse title="Équipements" description={<ul>{logement.equipments.map((equipment,index)=> <li key={`equipement-${index}`}>{equipment}</li>)}</ul>} className="collapse_logement"/>
         </div>
     </div>
     )

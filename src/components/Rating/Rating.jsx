@@ -7,16 +7,16 @@ export default function Rating({rate}){
 
     for (let i =1; i<= maxStars; i++){
         if(i <= rate){
-            stars.push("star_active")
+            stars.push("star__active")
         }else{
-            stars.push("star_inactive")
+            stars.push("star__inactive")
         }
     }
 
 
     return(
         <div className="star">
-            {stars.map((star)=> <i className={`fa-solid fa-star ${star}`}></i>)}
+            {stars.map((star,index)=> <i  key={`star-${index}`} className={`fa-solid fa-star ${star}`}></i>)}
         </div>
     )
 }

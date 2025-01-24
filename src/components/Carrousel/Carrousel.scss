@@ -1,3 +1,6 @@
+@import "../../style/variable.scss";
+@import "../../style/mixin.scss";
+
 .carrousel{
     display: flex;
     flex-direction: column;
@@ -7,7 +10,7 @@
     width: 100%;
     overflow: hidden;
 
-    @media (max-width:390px){
+    @include mobile_responsive{
         width: 100%;
     }
 
@@ -22,9 +25,9 @@
             height: 415px;
             width: 100%;
             min-width: 100%;
-            border-radius: 25px;
+            border-radius: map-get($border_radius, large );
 
-            @media (max-width:390px){
+            @include mobile_responsive{
                 object-fit: cover;
                 height: 255px;
                 width: 335px;
@@ -40,16 +43,16 @@
         height: 415px;
         justify-content: space-between;
         position: absolute;
-        color: white;
+        color: $terciary_color;
 
-        @media (max-width:390px){
+        @include mobile_responsive{
             height: 100%;
         }
 
         &__number {
             margin-top: 360px;
 
-            @media (max-width:390px){
+            @include mobile_responsive{
                 display: none;
             }
         }
@@ -60,7 +63,7 @@
             padding-right: 20px;
             cursor: pointer;
 
-            @media (max-width:390px){
+            @include mobile_responsive{
                 font-size: 20px;
                 padding-left: 10px;
                 padding-right: 10px;

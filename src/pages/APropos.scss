@@ -1,3 +1,6 @@
+@import "../style/variable.scss";
+@import "../style/mixin.scss";
+
 .main_apropos{
     display: flex;
     flex-direction: column;
@@ -7,12 +10,14 @@
     &__collapse{
         display: flex;
         flex-direction: column;
+        gap: 30px;
+        @include mobile_responsive {
+            gap: 20px;
+        }
     }
-    @media (max-width:390px) {
+    @include mobile_responsive {
         width: 95%;
         margin-bottom:10px ;
-        margin-top: 25px;
-
-
+        margin-top: 25px; 
     }
 }
