@@ -1,0 +1,82 @@
+@import "../../style/variable.scss";
+@import "../../style/mixin.scss";
+
+.collapse{
+    display: flex;
+    flex-direction: column;
+        &__title{
+            display: flex;
+            flex-direction: row;
+            background-color: $primary_color;
+            color: $terciary_color;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 5px;
+            height: 52px;
+            @include mobile_responsive {
+                height: 30px;
+            }
+            h2{
+                padding-left: 15px;
+                @include mobile_responsive {
+                    font-size: 13px;
+                    font-weight: 700;
+                    line-height: 19px;
+                }
+            }
+            i {                
+                margin-right: 25px;
+                font-size: x-large;
+                cursor: pointer;
+                @include mobile_responsive {
+                font-size: large;
+                margin-right: 15px;
+
+                }
+            }
+            &__opened {                
+                transform: rotate(-180deg);
+                transition: transform 0.5s
+            }
+            &__closed {
+                transform: rotate(0deg);
+                transition: transform 0.5s
+            }
+        }
+
+        &__description{
+            height: auto;
+            transition: height 0.3s ease, padding 0.3s ease; 
+            padding: 18px; 
+            background-color: $secondary_color;
+            @include mobile_responsive {
+                font-weight: 400;
+                line-height: 17px;
+                font-size: 12px;;
+            }
+            &__hidden{
+                padding: 0 18px;
+                overflow: hidden;
+                height: 0;
+            }
+            li{
+                list-style-type: none;
+                
+            }
+            ul{
+                padding-left: 5px;
+                margin-top: 0;
+            }
+        }
+        
+}
+
+.collapse_logement{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+
+    @include mobile_responsive{
+        width: 100%;
+    }
+}

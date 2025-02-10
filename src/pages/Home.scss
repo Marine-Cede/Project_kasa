@@ -1,0 +1,36 @@
+@import "../style/variable.scss";
+@import "../style/mixin.scss";
+
+.home {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+    width: 65%;
+    @include mobile_responsive {
+        width: 100%;
+        margin-top: 25px;
+    }
+    &__section{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          background-color: $secondary_color;
+          border-radius: map-get($border_radius,large );
+          gap: 50px;
+          padding-top: 55px;
+          margin-bottom: 50px;
+          padding-bottom: 50px;
+          padding-left: 55px;
+           @include mobile_responsive {
+            width: 335px; 
+            padding-top: 0px;
+            padding-left: 0px;      
+            gap: 22px;  
+            background-color: $terciary_color;
+        }
+
+    }
+}

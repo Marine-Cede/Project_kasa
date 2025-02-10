@@ -1,0 +1,42 @@
+@import "../../style/variable.scss";
+@import "../../style/mixin.scss";
+
+.banner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 210px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.59);   
+    background-color: #000000;
+    margin-bottom: 50px;
+    @include mobile_responsive {
+        height: 110px;
+        margin-bottom: 25px;
+    }
+    &__image {
+        opacity: 40%;    
+        width: 1240px;
+        @include mobile_responsive {
+            opacity: 40%;    
+            width: 335px;
+        }
+    }
+    &__title {
+        position: absolute;
+        color: $terciary_color;
+        font-size: 48px;
+        text-shadow: 0px 4px 4px #000000;
+        @include mobile_responsive {
+            position: absolute;
+            color: $terciary_color;
+            font-size: map-get($font_size, title );
+            line-height: 24px;
+            font-weight: 700;
+            text-shadow: 0px 4px 4px #000000;
+            width: 60%;
+            left: 50px;}
+    }
+}

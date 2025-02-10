@@ -1,0 +1,32 @@
+@import "../../style/variable.scss";
+@import "../../style/mixin.scss";
+
+.card {
+    display: flex;
+    flex-direction: column;  
+    justify-content: end;
+    &__image {
+        width: 340px;
+        height: 340px;
+        object-fit: cover;
+        border-radius: map-get($border_radius, medium );
+        @include mobile_responsive {
+            width: 335px;
+            height: 255px;          
+        }
+     
+    }
+    &__title {
+        position: absolute;
+        color: $terciary_color;
+        padding-left: 20px;
+        font-weight: 700;
+        font-size: map-get($font_size , text );
+        line-height: 26px;
+        text-shadow: 0px 2px 4px #000000;
+        width: 14%;
+        @include mobile_responsive {     
+            width: 50%;    
+        }
+    }
+}
